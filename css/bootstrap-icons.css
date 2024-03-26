@@ -1,11 +1,21 @@
 @font-face {
     font-display: block;
     font-family: "bootstrap-icons";
-    src: url("../fonts/Coldiac.ttf");
+    src: url("../fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf") format("woff2"), url("../fonts/bootstrap-icons.woff?8d200481aa7f02a2d63a331fc782cfaf") format("woff");
 }
 
-body {
-    font-family: bootstrap-icons !important;
+@font-face {
+    font-display: block;
+    font-family: "campus";
+    src: url("../fonts/campus.ttf");
+}
+
+.break {
+    font-family: campus !important;
+}
+
+.table-background-image-wrap {
+    width: 24vh;
 }
 
 .bi::before,
