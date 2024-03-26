@@ -13,13 +13,13 @@ https://templatemo.com/tm-583-festava-live
 
 :root {
     --white-color: #ffffff;
-    --primary-color: #1D181F;
-    --secondary-color: #F4F2F2;
+    --primary-color: #F8CB2E;
+    --secondary-color: #EE5007;
     --section-bg-color: #f0f8ff;
-    --custom-btn-bg-color: #1D181F;
+    --custom-btn-bg-color: #EE5007;
     --custom-btn-bg-hover-color: #c01f27;
     --dark-color: #000000;
-    --p-color: #f4f2f4;
+    --p-color: #717275;
     --border-color: #7fffd4;
     --link-hover-color: #B22727;
     --body-font-family: 'Outfit', sans-serif;
@@ -43,72 +43,6 @@ https://templatemo.com/tm-583-festava-live
 body {
     background-color: var(--white-color);
     font-family: var(--body-font-family);
-}
-
-.mainmenu,
-.submenu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-
-/* make ALL links (main and submenu) have padding and background color */
-
-.mainmenu a {
-    display: block;
-    text-decoration: none;
-    padding: 10px;
-    color: #000;
-}
-
-
-/* add hover behaviour */
-
-.mainmenu a:hover {}
-
-
-/* when hovering over a .mainmenu item,
-  display the submenu inside it.
-  we're changing the submenu's max-height from 0 to 200px;
-*/
-
-.mainmenu li {
-    font-size: 18px !important;
-}
-
-.mainmenu li:hover .submenu {
-    display: block;
-    max-height: 100%;
-}
-
-
-/*
-  we now overwrite the background-color for .submenu links only.
-  CSS reads down the page, so code at the bottom will overwrite the code at the top.
-*/
-
-.submenu a {}
-
-.submenu li {
-    margin-left: 10%;
-    font-size: 15px !important;
-}
-
-
-/* hover behaviour for links inside .submenu */
-
-.submenu a:hover {}
-
-
-/* this is the initial state of all submenus.
-  we set it to max-height: 0, and hide the overflowed content.
-*/
-
-.submenu {
-    overflow: hidden;
-    max-height: 0;
-    -webkit-transition: transform 0.5s ease-out;
 }
 
 
@@ -550,145 +484,6 @@ strong {
     height: calc(100vh);
 }
 
-a {
-    text-decoration: none;
-    color: #232323;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: tomato;
-}
-
-#menuToggle {
-    display: block;
-    position: relative;
-    /* top: 50px; */
-    left: 50px;
-    z-index: 1;
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-#menuToggle a li {
-    text-decoration: none;
-    color: #232323 !important;
-    transition: color 0.3s ease;
-}
-
-#menuToggle a:hover {
-    color: #1D181F;
-}
-
-#menuToggle input {
-    display: block;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
-    cursor: pointer;
-    opacity: 0;
-    /* hide this */
-    z-index: 2;
-    /* and place it over the hamburger */
-    -webkit-touch-callout: none;
-}
-
-
-/*
- * Just a quick hamburger
- */
-
-#menuToggle span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-    background: #cdcdcd;
-    border-radius: 3px;
-    z-index: 1;
-    transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
-}
-
-#menuToggle span:first-child {
-    transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2) {
-    transform-origin: 0% 100%;
-}
-
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-
-#menuToggle input:checked~span {
-    opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
-    background: #232323;
-}
-
-
-/*
- * But let's hide the middle one.
- */
-
-#menuToggle input:checked~span:nth-last-child(3) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-
-#menuToggle input:checked~span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(0, -1px);
-}
-
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-
-#menu {
-    color: #cdcdcd;
-    position: absolute;
-    width: 22rem;
-    margin: -100px 0 0 -50px;
-    padding: 50px;
-    height: 100vh;
-    padding-top: 160px;
-    background: #ededed;
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-}
-
-#menu li {
-    padding: 10px 0;
-    font-size: 22px;
-}
-
-
-/*
- * And let's slide it in from the left
- */
-
-#menuToggle input:checked~ul {
-    transform: none;
-}
-
 .hero-section small {
     color: var(--white-color);
     text-transform: uppercase;
@@ -908,15 +703,34 @@ a:hover {
 }
 
 .schedule-table .pop-background-image {
-    background-image: url('../images/artists/joecalih-UmTZqmMvQcw-unsplash.jpg');
+    background-image: url('../images/eve1.jpg');
+    background-size: cover;
+    height: 30vh;
 }
 
 .schedule-table .rock-background-image {
-    background-image: url('../images/artists/abstral-official-bdlMO9z5yco-unsplash.jpg');
+    background-image: url('../images/eve2.jpg');
+    height: 30vh;
 }
 
 .schedule-table .country-background-image {
-    background-image: url('../images/artists/soundtrap-rAT6FJ6wltE-unsplash.jpg');
+    background-image: url('../images/eve3.jpg');
+    height: 30vh;
+}
+
+.schedule-table .county-background-image {
+    background-image: url('../images/V4.jpg');
+    height: 30vh;
+}
+
+.schedule-table .hip-background-image {
+    background-image: url('../images/V5.jpg');
+    height: 30vh;
+}
+
+.schedule-table .hipho-background-image {
+    background-image: url('../images/V6.jpg');
+    height: 30vh;
 }
 
 .table-background-image-wrap {
